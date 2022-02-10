@@ -64,6 +64,10 @@ echo "$timeStamp" "Starting: Setting Dock Background Opacity"
 gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.10000000000000001
 echo "$timeStamp" "Finished: Setting Dock Background Opacity"
 
+echo "$timeStamp" "Starting: Setting Dock Background Opacity"
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+echo "$timeStamp" "Finished: Setting Dock Background Opacity"
+
 echo "$timeStamp" "Starting: Dock Fixed? = False"
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 echo "$timeStamp" "Finished: Dock Fixed? = False"
