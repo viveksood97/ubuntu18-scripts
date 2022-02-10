@@ -6,6 +6,8 @@ timeStamp="[ $(date "+%D %T") ]"
 echo "$timeStamp" "Setting up visual preferences and Installing all packages"
 echo ""
 
+sudo apt -qq -y autoremove
+
 echo "$timeStamp" "Starting: Update and Upgrade"
 sudo apt -qq -y update && sudo apt -qq -y upgrade
 echo "$timeStamp" "Finished: Update and Upgrade"
@@ -24,7 +26,7 @@ sudo apt -qq -y install ./code_1.64.1-1644255817_amd64.deb
 echo "$timeStamp" "Finished: Installing Vscode"
 
 echo "$timeStamp" "Starting: Installing Cura"
-wget https://github.com/Ultimaker/Cura/releases/download/4.13.0/Ultimaker_Cura-4.13.0.AppImage
+sudo wget https://github.com/Ultimaker/Cura/releases/download/4.13.0/Ultimaker_Cura-4.13.0.AppImage
 sudo mv Ultimaker_Cura-4.13.0.AppImage /usr/bin/cura\nsudo chmod +x /usr/bin/cura
 echo "$timeStamp" "Finished: Installing Cura"
 
@@ -79,4 +81,5 @@ echo "$timeStamp" "Starting: Hiding Desktop Icons"
 gsettings set org.gnome.desktop.background show-desktop-icons false
 echo "$timeStamp" "Finished: Hiding Desktop Icons"
 
+sudo apt -qq -y autoremove
 echo "RESTART SYSTEM"
