@@ -19,6 +19,8 @@ echo "$timeStamp" "Finished: Installing gnome-tweaks"
 
 echo "$timeStamp" "Starting: Installing terminator"
 sudo apt -qq -y install terminator
+sudo mkdir ${HOME}/.config/terminator
+sudo cp ${HOME}/ubuntu18-scripts/config ${HOME}/.config/terminator
 echo "$timeStamp" "Finished: Installing terminator"
 
 echo "$timeStamp" "Starting: Installing Vscode"
