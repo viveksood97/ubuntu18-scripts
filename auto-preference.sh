@@ -45,7 +45,7 @@ echo "$timeStamp" "Finished: Installing brave"
 
 
 echo "$timeStamp" "Starting: Installing dconf"
-sudo apt -qq install dconf-editor -y
+sudo apt -qq -y install dconf-editor
 echo "$timeStamp" "Finished: Installing dconf"
 
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
@@ -95,4 +95,16 @@ gsettings set org.gnome.desktop.background picture-uri 'file:///home/blade/Pictu
 echo "$timeStamp" "Finished:  Changing Wallpaper"
 
 sudo apt -qq -y autoremove
-echo "RESTART SYSTEM"
+echo "$timeStamp" "Starting: Installing zsh and making it default shell"
+sudo apt -qq -y install zsh
+sudo chsh -s /usr/bin/zsh
+echo "$timeStamp" "Finished: Installing zsh and making it default shell"
+
+echo "$timeStamp" "Starting: Installing oh my zsh"
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "$timeStamp" "Finished: Installing oh my zsh"
+
+echo "$timeStamp" "Starting: Downloading Powerlevel10k"
+sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sed -i 's|robbyrussell|powerlevel10k/powerlevel10k|g' ~/.zshrc
+
