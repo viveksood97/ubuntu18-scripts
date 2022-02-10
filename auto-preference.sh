@@ -98,7 +98,7 @@ echo "$timeStamp" "Finished:  Changing Wallpaper"
 sudo apt -qq -y autoremove
 echo "$timeStamp" "Starting: Installing zsh and making it default shell"
 sudo apt -qq -y install zsh
-sudo chsh -s /usr/bin/zsh
+sudo chsh -s $(which zsh) $(whoami)
 echo "$timeStamp" "Finished: Installing zsh and making it default shell"
 
 echo "$timeStamp" "Starting: Installing oh my zsh"
