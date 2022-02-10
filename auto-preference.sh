@@ -46,10 +46,7 @@ echo "$timeStamp" "Finished: Installing dconf"
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
 cd ${HOME}/
 sudo mkdir .themes
-cd ${HOME}/.themes
-sudo wget https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY0NDQ0MjczNCwidSI6bnVsbCwibHQiOiJkb3dubG9hZCIsInMiOiJkZTE1Y2MyMTg2OTE4ZTY5Y2MwOWQwMDVmYjA4YjQyZGRhNWZmMWI2ZWZiNTczODEzZDAzZjMzZDE4ODVkZDI2ZTAzOGVhODIyNjczYmUxMWJmM2Y1MjNjMjg4MjQyMzk5YmM2YWZlNDVkYzExMzlmYjJkMTI1ZWU4OWRhNzlhZCIsInQiOjE2NDQ0Nzc5MTAsInN0ZnAiOm51bGwsInN0aXAiOm51bGx9.xQpDhyfJcLtHnNFe--U1RyBvCsT6zrGgJDRQnIT2ALU/Nordic-darker-v40.tar.xz
-sudo tar -xf Nordic-darker-v40.tar.xz
-sudo rm  Nordic-darker-v40.tar.xz
+cp -r ${HOME}/ubuntu18-scripts/Nordic-darker ${HOME}/.themes/
 echo "$timeStamp" "Finished: Moving theme to .themes folder"
 
 echo "$timeStamp" "Starting: Setting Theme Nordic-Darker"
