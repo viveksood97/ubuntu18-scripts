@@ -42,11 +42,14 @@ sudo apt -qq install dconf-editor -y
 echo "$timeStamp" "Finished: Installing dconf"
 
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
-sudo cp -r ./Nordic-darker/  ~/.themes/
+cd ${HOME}/.themes/
+sudo wget https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTY0NDQ0MjczNCwidSI6bnVsbCwibHQiOiJkb3dubG9hZCIsInMiOiJkZTE1Y2MyMTg2OTE4ZTY5Y2MwOWQwMDVmYjA4YjQyZGRhNWZmMWI2ZWZiNTczODEzZDAzZjMzZDE4ODVkZDI2ZTAzOGVhODIyNjczYmUxMWJmM2Y1MjNjMjg4MjQyMzk5YmM2YWZlNDVkYzExMzlmYjJkMTI1ZWU4OWRhNzlhZCIsInQiOjE2NDQ0Nzc5MTAsInN0ZnAiOm51bGwsInN0aXAiOm51bGx9.xQpDhyfJcLtHnNFe--U1RyBvCsT6zrGgJDRQnIT2ALU/Nordic-darker-v40.tar.xz
+sudo tar -xf Nordic-darker-v40.tar.xz
+sudo rm  Nordic-darker-v40.tar.xz
 echo "$timeStamp" "Finished: Moving theme to .themes folder"
 
 echo "$timeStamp" "Starting: Setting Theme Nordic-Darker"
-gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-darker'
+gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-darker-v40'
 echo "$timeStamp" "Finished: Settng Theme Nordic-Darker"
 
 
@@ -76,7 +79,4 @@ echo "$timeStamp" "Starting: Hiding Desktop Icons"
 gsettings set org.gnome.desktop.background show-desktop-icons false
 echo "$timeStamp" "Finished: Hiding Desktop Icons"
 
-echo "$timeStamp" "Starting: Fixing Right Click"
-gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
-echo "$timeStamp" "Finished: Fixing Right Click"
-
+echo "RESTART SYSTEM"
