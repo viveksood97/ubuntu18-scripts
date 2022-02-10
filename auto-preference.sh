@@ -26,9 +26,11 @@ sudo apt -qq -y install ./code_1.64.1-1644255817_amd64.deb
 echo "$timeStamp" "Finished: Installing Vscode"
 
 echo "$timeStamp" "Starting: Installing Cura"
-sudo mkdir /usr/bin/cura
-sudo wget https://github.com/Ultimaker/Cura/releases/download/4.13.0/Ultimaker_Cura-4.13.0.AppImage
-sudo mv Ultimaker_Cura-4.13.0.AppImage /usr/bin/cura\nsudo chmod +x /usr/bin/cura
+sudo snap install cura-slicer
+# sudo mkdir /usr/bin/cura
+# sudo wget https://github.com/Ultimaker/Cura/releases/download/4.13.0/Ultimaker_Cura-4.13.0.AppImage
+# sudo mv Ultimaker_Cura-4.13.0.AppImage /usr/bin/cura
+# sudo chmod +x /usr/bin/cura
 echo "$timeStamp" "Finished: Installing Cura"
 
 echo "$timeStamp" "Starting: Installing Brave"
@@ -47,11 +49,11 @@ echo "$timeStamp" "Finished: Installing dconf"
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
 cd ${HOME}/
 sudo mkdir .themes
-cp -r ${HOME}/ubuntu18-scripts/Nordic-darker ${HOME}/.themes/
+sudo cp -r ${HOME}/ubuntu18-scripts/Nordic-darker ${HOME}/.themes/
 echo "$timeStamp" "Finished: Moving theme to .themes folder"
 
 echo "$timeStamp" "Starting: Setting Theme Nordic-Darker"
-gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-darker-v40'
+gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-darker'
 echo "$timeStamp" "Finished: Settng Theme Nordic-Darker"
 
 
@@ -79,6 +81,10 @@ echo "$timeStamp" "Finished: Dock Fixed? = False"
 
 echo "$timeStamp" "Starting: Hiding Desktop Icons"
 gsettings set org.gnome.desktop.background show-desktop-icons false
+echo "$timeStamp" "Finished: Hiding Desktop Icons"
+
+echo "$timeStamp" "Starting: Hiding Desktop Icons"
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
 echo "$timeStamp" "Finished: Hiding Desktop Icons"
 
 sudo apt -qq -y autoremove
