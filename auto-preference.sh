@@ -90,6 +90,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
 echo "$timeStamp" "Finished: Hiding Desktop Icons"
 
 echo "$timeStamp" "Starting: Changing Wallpaper"
+sudo mkdir ${HOME}/Pictures/Wallpapers/
 sudo cp ${HOME}/ubuntu18-scripts/wallpaper.png ${HOME}/Pictures/Wallpapers/
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/blade/Pictures/Wallpapers/wallpaper.png'
 echo "$timeStamp" "Finished:  Changing Wallpaper"
