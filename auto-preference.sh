@@ -26,6 +26,7 @@ sudo apt -qq -y install ./code_1.64.1-1644255817_amd64.deb
 echo "$timeStamp" "Finished: Installing Vscode"
 
 echo "$timeStamp" "Starting: Installing Cura"
+sudo mkdir /usr/bin/cura
 sudo wget https://github.com/Ultimaker/Cura/releases/download/4.13.0/Ultimaker_Cura-4.13.0.AppImage
 sudo mv Ultimaker_Cura-4.13.0.AppImage /usr/bin/cura\nsudo chmod +x /usr/bin/cura
 echo "$timeStamp" "Finished: Installing Cura"
