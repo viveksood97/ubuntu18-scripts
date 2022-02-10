@@ -76,3 +76,7 @@ echo "$timeStamp" "Starting: Hiding Desktop Icons"
 gsettings set org.gnome.desktop.background show-desktop-icons false
 echo "$timeStamp" "Finished: Hiding Desktop Icons"
 
+echo "$timeStamp" "Starting: Fixing Right Click"
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+echo "$timeStamp" "Finished: Fixing Right Click"
+
