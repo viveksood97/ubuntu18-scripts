@@ -109,7 +109,7 @@ echo "$timeStamp" "Starting: Installing oh my zsh"
 sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "$timeStamp" "Finished: Installing oh my zsh"
 
-echo "$timeStamp" "Starting: Downloading Powerlevel10k"
-sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sed -i 's|robbyrussell|powerlevel10k/powerlevel10k|g' ~/.zshrc
+# echo "$timeStamp" "Starting: Downloading Powerlevel10k"
+# sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# sed -i 's|robbyrussell|powerlevel10k/powerlevel10k|g' ~/.zshrc
 
