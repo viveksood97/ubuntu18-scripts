@@ -48,6 +48,10 @@ echo "$timeStamp" "Starting: Installing dconf"
 sudo apt -qq -y install dconf-editor
 echo "$timeStamp" "Finished: Installing dconf"
 
+echo "$timeStamp" "Starting: Installing htop"
+sudo apt -qq -y install htop
+echo "$timeStamp" "Finished: Installing htop"
+
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
 cd ${HOME}/
 sudo mkdir .themes
