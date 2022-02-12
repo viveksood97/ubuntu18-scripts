@@ -1,4 +1,4 @@
-#  ['netspeedsimplified@prateekmedia.extension', 'wintile@nowsci.com', 'impatience@gfxmonk.net', 'netspeed@hedayaty.gmail.com', 'sound-output-device-chooser@kgshank.net', 'gnome-ui-tune@itstime.tech', 'shell-volume-mixer@derhofbauer.at']
+#  ['wintile@nowsci.com', 'netspeed@hedayaty.gmail.com', 'sound-output-device-chooser@kgshank.net', 'gnome-ui-tune@itstime.tech']
 
 
 
