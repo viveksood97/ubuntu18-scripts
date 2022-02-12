@@ -52,6 +52,10 @@ echo "$timeStamp" "Starting: Installing htop"
 sudo apt -qq -y install htop
 echo "$timeStamp" "Finished: Installing htop"
 
+echo "$timeStamp" "Starting: Installing chrome-gnome-shell"
+sudo apt -qq -y install chrome-gnome-shell
+echo "$timeStamp" "Finished: Installing chrome-gnome-shell"
+
 echo "$timeStamp" "Starting: Moving theme to .themes folder"
 cd ${HOME}/
 sudo mkdir .themes
